@@ -28,6 +28,12 @@
           "fix": "safe",
           "level":"error"
         }
+      },
+      "style": {
+        "useImportType": {
+          "fix": "safe",
+          "level":"error"
+        }
       }
     }
   },
