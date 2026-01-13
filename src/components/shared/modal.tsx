@@ -28,8 +28,10 @@ function Modal({
         )}
         {...props}
       >
-        <h3 className="text-xl font-bold mb-4">{title}</h3>
-        <p className="text-sm text-muted-foreground">{desc}</p>
+        <div className="mb-4">
+          <h3 className="text-xl font-bold">{title}</h3>
+          <p className="text-sm text-muted-foreground">{desc}</p>
+        </div>
         {children}
         <div className="mt-4 flex gap-2 justify-end">
           {actionBtns?.map((actionBtn) => (
