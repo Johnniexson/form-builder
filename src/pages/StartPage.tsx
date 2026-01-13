@@ -1,10 +1,9 @@
-import { Button } from '@/components/ui/button';
+import ConfigurableFormBuilder from '@/components/formBuilder/index.tsx';
 
 function StartPage() {
   return (
-    <div className="">
-      <h2>This is start page</h2>
-      <Button>Click me</Button>
+    <div className="min-h-screen flex w-full bg-background overflow-hidden">
+      <ConfigurableFormBuilder />
     </div>
   );
 }
