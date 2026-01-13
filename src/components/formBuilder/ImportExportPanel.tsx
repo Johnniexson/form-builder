@@ -1,6 +1,6 @@
+import { Modal } from '@/components/shared/modal';
 import { Button } from '@/components/ui/button';
 import { Label } from '@/components/ui/label';
-import { Modal } from '@/components/ui/modal';
 import { Textarea } from '@/components/ui/textarea';
 import type { FormConfiguration } from '@/types';
 import { AlertCircle, Check, Copy, Download, Upload } from 'lucide-react';
