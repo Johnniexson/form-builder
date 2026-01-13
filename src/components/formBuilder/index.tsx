@@ -5,12 +5,20 @@ import { FormBuilderProvider } from '@/lib/store/form-builder-context';
 import type { FormConfiguration } from '@/types';
 import { Eye, FolderOpen, Hash, Pencil, Plus, Type } from 'lucide-react';
 import type React from 'react';
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 import FieldEditor from './FieldEditor';
 import FormPreview from './FormPreview';
+import ImportExportPanel from './ImportExportPanel';
 
 const FormBuilderContent: React.FC = () => {
-  const { config, addField } = useFormBuilder();
+  const { config, setConfig, addField } = useFormBuilder();
+
+  const handleImport = useCallback(
+    (newConfig: FormConfiguration) => {
+      setConfig(newConfig);
+    },
+    [setConfig]
+  );
 
   return (
     <div className="h-auto w-full flex flex-col">
@@ -22,6 +30,7 @@ const FormBuilderContent: React.FC = () => {
             Configurable form builder
           </p>
         </div>
+        <ImportExportPanel config={config} onImport={handleImport} />
       </div>
 
       {/* Main Content */}
